@@ -117,7 +117,7 @@ public class CrptApi {
                 timeArray.remove(0);
                 timeArray.add(Instant.now());
             } else {
-                TimeUnit.SECONDS.sleep( 5);
+                TimeUnit.MILLISECONDS.sleep(timeUnit.toMillis(1)/requestLimit);
                 continue;
             }
 
